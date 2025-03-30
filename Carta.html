@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="container-letter">
+      <div class="cover"></div>
+      <span class="heart">♥</span>
+      <p class="paper" id="mainMessage">
+        Un año juntos, un año de amor, risas y crecimiento. Cada momento a tu lado ha sido un regalo, cada abrazo un refugio. Que este aniversario sea solo el inicio de muchos más. ¡Te amo, mi ratoncita! 💖✨
+      </p>
+      <div class="letter"></div>
+    </div>
+    <div class="options">
+      <button id="open">Abrir</button>
+      <button id="close">Cerrar</butto>
+    </div>
+  </main>
+  <script src="script.js"></script>
+
+  <audio id="miAudio" autoplay loop>
+    <source src="cancion2.mp4" type="audio/mp3">
+    Tu navegador no soporta audio.
+</audio>
+
+<label for="volume">Volumen 🔊</label>
+<input type="range" id="volume" name="volume" min="0" max="1" step="0.1" value="0.5" onchange="ajustarVolumen(this.value)">
+
+<script>
+    function ajustarVolumen(valor) {
+        var audio = document.getElementById("miAudio");
+        audio.volume = valor;
+    }
+</script>
+
+</body>
+</html>
